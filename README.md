@@ -1,5 +1,5 @@
 # DiscordBot
-- Данный дискорд бот был накляпан для игровых серверов замечательной игры: https://www.froemling.net/apps/bombsquad.
+- Данный дискорд бот был накляпан для игровых серверов замечательной игры BombSquad: tools.ballistica.net/builds
 
 # Настройка & установка
 - TODO
