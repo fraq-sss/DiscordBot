@@ -1,0 +1,12 @@
+discord_bot:
+  token: MTAxODI0NDQxMjM5ODEwODczMg.GI2HaP.cuyhbD-NQ_SEMgBGtmbhaK7jAjvQ7bEfaSlgK4
+  default_prefix: a.
+  owner_ids: [896817060489883688]
+
+bs_servers:
+  path: ../
+  folders:
+    Abyss - Teams: '0'
+    Abyss - FFA Fun Games: '1'
+    Abyss - FFA Epic Elimination: '2'
+  players_stats_file: /dist/ba_data/python/mod/data/player/stats.json
