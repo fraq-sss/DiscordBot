@@ -3,24 +3,24 @@ from yaml import full_load
 
 
 with open('config.yaml') as cfg_file:
-    cfg = full_load(cfg_file)
+    cfg = full_load(cfg_file)['bs_servers']
 
 
 class Data:
-    name = tuple(cfg['bs_servers']['folders'].keys())[0]
+    name = tuple(cfg['folders'].keys())[0]
     players_stats_file = (
-        cfg['bs_servers']['path'] +
-        cfg['bs_servers']['folders'][name] +
-        cfg['bs_servers']['players_stats_file']
+        cfg['path'] +
+        cfg['folders'][name] +
+        cfg['players_stats_file']
     )
 
 
 def update_data(name: str) -> None:
     Data.name = name
     Data.players_stats_file = (
-        cfg['bs_servers']['path'] +
-        cfg['bs_servers']['folders'][name] +
-        cfg['bs_servers']['players_stats_file']
+        cfg['path'] +
+        cfg['folders'][name] +
+        cfg['players_stats_file']
     )
 
 
