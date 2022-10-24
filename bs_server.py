@@ -13,7 +13,7 @@ class Data:
         cfg['folders'][name] +
         cfg['players_stats_file']
     )
-    
+
     @staticmethod
     def update(new_name: str) -> None:
         name = new_name
