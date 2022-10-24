@@ -20,7 +20,7 @@ bot = commands.Bot(
 
 
 @bot.event
-async def on_command_error(ctx: Context, exc: Exception) -> None:
+async def on_command_error(ctx: Context, exc: commands.errors.CommandError) -> None:
     if isinstance(exc, commands.NotOwner):
         await ctx.reply('You are not owner of the bot!')
     elif isinstance(exc, commands.CommandOnCooldown):
@@ -70,7 +70,7 @@ async def top_players(ctx: Context, arg: int = 10) -> None:
     arg = arg if 1 <= arg <= len(top) else len(top)
     description = '\n'.join([f'{i + 1}) {top[i]["name"]}' for i in range(arg)])
     await ctx.reply(embed=discord.Embed(
-        title=f'Top {arg} players of the {bs_server.Data.name}',
+        title=f'Top {arg} players of the {bs_server.name}',
         description=f'```{description}```',
         color=discord.Colour.dark_purple()
     ))
@@ -87,7 +87,7 @@ async def information(ctx: Context, arg: str) -> None:
         return
     description = '\n'.join([f'{k}: {v}' for k, v in data.items()])
     await ctx.reply(embed=discord.Embed(
-        title=f'Player information of the {bs_server.Data.name}',
+        title=f'Player information of the {bs_server.name}',
         description=f'```{description}```',
         color=discord.Colour.dark_purple()
     ))
