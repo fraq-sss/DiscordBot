@@ -19,7 +19,7 @@ class Data:
         name = new_name
         players_stats_file = (
             cfg['path'] +
-            cfg['folders'][new_name] +
+            cfg['folders'][name] +
             cfg['players_stats_file']
         )
 
