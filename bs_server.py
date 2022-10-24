@@ -13,15 +13,15 @@ class Data:
         cfg['folders'][name] +
         cfg['players_stats_file']
     )
-
-
-def update_data(name: str) -> None:
-    Data.name = name
-    Data.players_stats_file = (
-        cfg['path'] +
-        cfg['folders'][name] +
-        cfg['players_stats_file']
-    )
+    
+    @staticmethod
+    def update(new_name: str) -> None:
+        name = new_name
+        players_stats_file = (
+            cfg['path'] +
+            cfg['folders'][new_name] +
+            cfg['players_stats_file']
+        )
 
 
 def get_players_stats() -> dict:
